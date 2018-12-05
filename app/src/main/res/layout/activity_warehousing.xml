@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_status"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:background="#1c8eef"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/view_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="70dp" />
+
+        <!--相机预览-->
+        <com.tcc.parkingmanagement.vehicle.view.widget.camera.CameraPreview
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="70dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:background="#1c8eef" />
+
+        <View
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="#1c8eef" />
+
+        <View
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#1c8eef" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="251dp"
+            android:background="#1c8eef" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#fff"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="250dp"/>
+
+        <com.tcc.parkingmanagement.vehicle.view.widget.CameraAuxView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:type="0"
+            android:layout_marginTop="69dp"
+            android:layout_marginLeft="59dp"/>
+
+        <com.tcc.parkingmanagement.vehicle.view.widget.CameraAuxView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:type="1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="69dp"
+            android:layout_marginRight="59dp"/>
+
+        <com.tcc.parkingmanagement.vehicle.view.widget.CameraAuxView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:type="2"
+            android:layout_marginTop="221dp"
+            android:layout_marginLeft="59dp"/>
+
+        <com.tcc.parkingmanagement.vehicle.view.widget.CameraAuxView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:type="3"
+            android:layout_marginTop="221dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="59dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <ImageView
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="扫描"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <!--右侧操作布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:background="#fff">
+
+        <com.parkingwang.keyboard.view.InputView
+            android:id="@+id/input_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            app:pwkInputTextSize="16sp"
+            style="@style/PWKInputViewStyle">
+
+        </com.parkingwang.keyboard.view.InputView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/input_view"
+            android:id="@+id/btn_switch"
+            android:text="新能源"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:layout_below="@+id/btn_switch">
+
+            <TextView
+                android:id="@+id/tv_rk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0a4e96"
+                android:text="入库时间"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_rk"
+                android:layout_below="@+id/tv_rk"
+                android:layout_marginLeft="10dp"
+                android:minWidth="120dp"
+                android:textColor="#0a4e96"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:id="@+id/tv_time_y"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="#0a4e96"
+                android:layout_toLeftOf="@+id/tv_time_h"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv_rk"/>
+
+            <TextView
+                android:id="@+id/tv_time_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rk"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#0a4e96"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_time_y"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="#0a4e96"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_time_y"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="#fff"
+            android:text="确定入库"
+            android:textSize="16sp"
+            android:id="@+id/btn_rk"
+            android:background="@drawable/shape_6eb3ff"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

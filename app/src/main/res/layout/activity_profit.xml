@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tcc.parkingmanagement.data.view.activity.ProfitActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:background="@drawable/bg">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:id="@+id/view_status"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_top1"
+            android:layout_below="@+id/view_status"
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back"
+                android:scaleType="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#fff"
+                android:text="收益"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rl_top1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tcc.parkingmanagement.data.view.widget.CircleView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:circleColor="#ffffff"
+                app:radius="60dp"
+                app:strokeWidth="3dp"
+                app:ringColor="#e60012"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:background="#eff0fa">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff">
+
+            <TextView
+                android:id="@+id/tv_stringtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1d8fef"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="最近一周"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_stringtime"
+                android:src="@drawable/arr_bottom"
+                android:layout_marginLeft="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#cdcdcd"
+                android:text="总收益"
+                android:textSize="12sp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_money"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#1fb551"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_money"
+                android:layout_marginRight="12dp"
+                android:text="¥ 0"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c6c6c6"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_top"
+            android:layout_marginTop="10dp">
+
+        </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    </RelativeLayout>
+
+</LinearLayout>

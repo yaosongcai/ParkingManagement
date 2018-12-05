@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.view.activity.MainActivity">
+    <item android:id="@+id/camera"
+        android:icon="@drawable/camera"
+        android:title="@string/camera"
+        android:enabled="true"
+        app:showAsAction="always"
+        />
+
+    <item android:id="@+id/pic"
+        android:title="@string/pic"
+        android:icon="@drawable/folder"
+        app:showAsAction="always"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/moreCheck"
+        android:enabled="true"
+        android:title="多图片识别"
+        />
+
+</menu>
